@@ -1,0 +1,39 @@
+{
+    "listaProductos": [
+        {
+            "titulo" : "Headphones Black and Blue",
+            "imagen" : "https://image.freepik.com/vector/diseno-gratis/diseno-fondo-coscos_1063-131.jpg",
+            "descripcion" : "Audífonos bluetooth duración máxima 20 horas",
+            "precio" : "39.000",
+            "stock": 4
+        },
+        {
+            "titulo" : "Smartwatch JP",
+            "imagen" : "https://image.freepik.com/vector/diseno-gratis/maqueta-blanca-smartwatch_6138-150.jpg",
+            "descripcion" : "Smartwatch free phone duración máxima 30 horas",
+            "precio" : "59.000",
+            "stock": 5
+        },
+        {
+            "titulo" : "Headphones Black JP",
+            "imagen" : "https://as1.ftcdn.net/v2/jpg/05/53/85/78/1000_F_553857807_GighAdgApqhXYD7H8HeWPPMNqiOVqoK6.webp",
+            "descripcion" : "Audífonos bluetooth duración máxima 20 horas",
+            "precio" : "35.000",
+            "stock": 2
+        },
+        {
+            "titulo" : "Monitor mediano",
+            "imagen" : "https://image.freepik.com/vector/diseno-gratis/diseno-fondo-coscos_1063-131.jpg",
+            "descripcion" : "Monitor 24 pulgadas",
+            "precio" : "110.000",
+            "stock": 7
+        },
+        {
+            "titulo" : "Monitor Grande",
+            "imagen" : "https://image.freepik.com/vector/diseno-gratis/diseno-fondo-coscos_1063-131.jpg",
+            "descripcion" : "Monitor 42 pulgadas",
+            "precio" : "230.000",
+            "stock": 6
+        }
+    ]
+}
