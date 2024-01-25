@@ -1,20 +1,15 @@
 import React from "react";
-import { Nav, NavItem, NavLink, Navbar, NavbarBrand } from "reactstrap";
+import { Nav, NavItem, Navbar, NavbarBrand } from "reactstrap";
+import Carro from "./Carro";
 
 class Navegacion extends React.Component {
     render() {
         return(
-            <Navbar color="light" light expand="md">
+            <Navbar color="light" light expand="xl">
                 <NavbarBrand href="/">{this.props.titulo}</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="/">Acerca de</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">React</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/">JavaScript</NavLink>
+                       <Carro />
                     </NavItem>
                 </Nav>
             </Navbar>

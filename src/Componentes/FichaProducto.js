@@ -11,15 +11,19 @@ import {
 } from 'reactstrap';
 
 import './FichaProducto.css';
+import {listaCarrito} from '../listaCarrito.json';
+
 
 class FichaProducto extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            modal:false
+            modal:false,
+            listaCarrito
         }
 
         this.toggle = this.toggle.bind(this);
+        this.agregarCarrito = this.agregarCarrito.bind(this);
     }
 
     toggle() {
@@ -27,6 +31,20 @@ class FichaProducto extends React.Component {
             modal: !prevState.modal
         }));
     }
+
+    agregarCarrito() {
+        listaCarrito.push({
+            "titulo": this.props.props.titulo,
+            "precio": this.props.props.precio
+        });
+        this.setState(prevState => ({
+            modal: !prevState.modal
+        }));
+        
+        this.toggle = this.toggle.bind(this);
+        this.agregarCarrito = this.agregarCarrito.bind(this)
+    }
+
 
     render() {
         return (
@@ -38,11 +56,11 @@ class FichaProducto extends React.Component {
                     <CardImg src={this.props.props.imagen} />
                     <p>El detalle del producto seleccionado es el siguiente:</p>
                     {this.props.props.descripcion}
-                    <p>Este producto tiene un valor de <b>$ {this.props.props.precio}</b></p>
-                    <p>Hay <b>{this.props.props.stock}</b> unidades de este producto</p>
+                    <p>Este producto tiene un valor de <b>$ {this.props.props.precio} pesos.</b></p>
+                    <p>Hay <b>{this.props.props.stock}</b> unidades de este producto disponibles.</p>
                 </ModalBody>
                 <ModalFooter className="ModalFooter">
-                    <Button color="primary" onClick={this.toggle}>Agregar al carrito</Button>
+                    <Button color="primary" onClick={this.agregarCarrito}>Agregar al carrito</Button>
                     <Button color="secondary" onClick={this.toggle}>Volver atrás</Button>
                 </ModalFooter>
             </Modal>

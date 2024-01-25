@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   render() {
-    const arregloComponentes = this.state.listaProductos.map(
+    const arregloComponente = this.state.listaProductos.map(
       (listaProductos, i) => {
         return (
           <Producto 
@@ -34,7 +34,7 @@ class App extends React.Component {
       <Container>
         <Navegacion titulo="Mi primer sitio de compras en React" />
         <Row>
-          {arregloComponentes}
+          {arregloComponente}
         </Row>
       </Container>
     );
