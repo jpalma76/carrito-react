@@ -24,7 +24,7 @@ class App extends React.Component {
             titulo = {listaProductos.titulo}
             imagen = {listaProductos.imagen}
             descripcion = {listaProductos.descripcion}
-            precio = {listaProductos.precio}
+            precio = {listaProductos.precio.replace(".", "")}
             stock = {listaProductos.stock}
             />
             )

@@ -19,6 +19,16 @@ class Carro extends React.Component {
         }));
 
     }
+
+    sumaTotal() {
+        let total = 0;
+        let sumaTotal = this.state.listaCarrito.map(
+            (listaCarrito) => {
+                return total+= parseInt(listaCarrito.precio);
+            }
+        )
+        return(total)
+    }
      
     render() {
         const arregloCarrito = this.state.listaCarrito.map(
@@ -36,22 +46,29 @@ class Carro extends React.Component {
             <div>
                 <Button id="Popover1" color="info">
                     <span className="material-icons">shopping_cart</span>
-                    <Badge color="secondary">{arregloCarrito.length}</Badge>
+                    <Badge color="secondary" id="Badge1">{listaCarrito.length}</Badge>
                 </Button>
                 <Popover target="Popover1" placement="bottom" isOpen={this.state.popoverOpen} toggle={this.toggle}>
                     <PopoverHeader>Listado de compras</PopoverHeader>
                     <PopoverBody>
-                        <Table>
+                        <Table className="table table-bordered table-sm">
                             <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Producto</th>
-                                <th>Precio</th>
+                                <th>Precio Producto</th>
                             </tr>
                             </thead>
                             <tbody>
                                 {arregloCarrito}
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td></td>
+                                    <td>Total:</td>
+                                    <td>$ {Intl.NumberFormat("de-DE").format(this.sumaTotal())} CLP</td>
+                                </tr>
+                            </tfoot>
                         </Table>
                     </PopoverBody>
                 </Popover>
