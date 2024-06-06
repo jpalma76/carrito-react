@@ -50,12 +50,12 @@ class FichaProducto extends React.Component {
         return(
             <Container>
                 <Button onClick={this.toggle}>Ver ficha</Button>
-                <Modal isOpen={this.state.modal}>
+                <Modal className="product" isOpen={this.state.modal}>
                     <ModalHeader>{this.props.props.titulo}</ModalHeader>
                     <ModalBody>
-                        <CardImg src={this.props.props.imagen}/>
-                        <p>El detalle del producto seleccionado es el siguiente:</p>
-                        {this.props.props.detalle}
+                        <CardImg className="imagen" src={this.props.props.imagen}/>
+                        {/* <p>El detalle del producto seleccionado es el siguiente:</p> */}
+                        {/* {this.props.props.detalle} */}
                         <p>Este producto tiene un valor de $ <b>{this.props.props.precio} CLP</b></p>
                         <p>Hay <b>{this.state.stock}</b> unidades de este producto disponibles.</p>
                     </ModalBody>

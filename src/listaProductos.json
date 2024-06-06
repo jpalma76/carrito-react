@@ -19,12 +19,5 @@
         "descripcion" : "Audífonos bluetooth duración máxima 20 horas",
         "precio" : "35.000",
         "stock": "2"
-    },
-    {
-        "titulo" : "Monitor mediano",
-        "imagen" : "https://image.freepik.com/vector/diseno-gratis/diseno-fondo-coscos_1063-131.jpg",
-        "descripcion" : "Monitor 24 pulgadas",
-        "precio" : "110.000",
-        "stock": "7"
     }
 ]

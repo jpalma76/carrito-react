@@ -4,7 +4,6 @@ import {
     CardBody, 
     CardImg, 
     CardSubtitle, 
-    CardText, 
     CardTitle, 
     Col 
 } from "reactstrap";
@@ -17,11 +16,10 @@ class Producto extends React.Component {
         return (
             <Col sm="4">
                 <Card className="Card" body outline color="primary">
-                    <CardImg src={this.props.imagen} alt={this.props.titulo} />
+                    <CardImg className="imagen" src={this.props.imagen} alt={this.props.titulo} />
                     <CardBody>
                         <CardTitle>{this.props.titulo}</CardTitle>
                         <CardSubtitle>Valor:$ <b>{Intl.NumberFormat("de-DE").format(this.props.precio)}</b> CLP</CardSubtitle>
-                        <CardText>{this.props.descripcion}</CardText>
                         <FichaProducto props={this.props}/>
                     </CardBody>
                 </Card>
